@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auth</title>
+</head>
+<body>
+<div th:if="${errors}">
+    Invalid username and password.
+</div>
+<form action="/login" method="POST">
+    <div><label> User Name : <input type="text" name="username" id="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password" id="password"/> </label></div>
+    <div><input type="submit" value="Login"/></div>
+</form>
+</body>
+</html>

@@ -18,18 +18,18 @@ jpa:
           auto: update
 
 
-#---
-#micronaut:
-#  security:
-#    enabled: true
-#    endpoints:
-#      login:
-#        enabled: true
-#      logout:
-#        enabled: true
-#    session:
-#      enabled: true
-#      loginSuccessTargetUrl: /
-#      loginFailureTargetUrl: /
+---
+micronaut:
+  security:
+    enabled: true
+    endpoints:
+      login:
+        enabled: true
+      logout:
+        enabled: true
+    session:
+      enabled: true
+      loginSuccessTargetUrl: /
+      loginFailureTargetUrl: /login/authFailed
 ---
 datasources.default: {}
