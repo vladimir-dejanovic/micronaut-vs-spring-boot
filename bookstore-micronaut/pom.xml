@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>xyz.itshark.conf.talk</groupId>
   <artifactId>bookstore-micronaut</artifactId>
-  <version>0.1</version>
+  <version>0.4</version>
   <properties>
     <micronaut.version>1.0.4</micronaut.version>
     <jdk.version>11</jdk.version>
