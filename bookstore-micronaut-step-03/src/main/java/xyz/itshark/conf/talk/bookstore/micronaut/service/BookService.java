@@ -1,10 +1,27 @@
 package xyz.itshark.conf.talk.bookstore.micronaut.service;
 
 import xyz.itshark.conf.talk.bookstore.micronaut.pojo.Book;
+import xyz.itshark.conf.talk.bookstore.micronaut.repository.BookRepository;
 
+import javax.inject.Singleton;
 import java.util.List;
 
-public interface BookService {
-    List<Book> getAllBooks();
-    Book addBook(String title);
+@Singleton
+public class BookService {
+
+    private BookRepository bookRepository;
+
+    public BookServiceImpl(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
+    @Override
+    public List<Book> getAllBooks() {
+        return bookRepository.findAll();
+    }
+
+    @Override
+    public Book addBook(String title) {
+        return bookRepository.save(title);
+    }
 }

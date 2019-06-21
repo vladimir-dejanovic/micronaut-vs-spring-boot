@@ -1,13 +1,13 @@
 package xyz.itshark.conf.talk.bookstore.micronaut.service;
 
-import xyz.itshark.conf.talk.bookstore.micronaut.repository.BookRepository;
 import xyz.itshark.conf.talk.bookstore.micronaut.pojo.Book;
+import xyz.itshark.conf.talk.bookstore.micronaut.repository.BookRepository;
 
 import javax.inject.Singleton;
 import java.util.List;
 
 @Singleton
-public class BookServiceImpl implements BookService {
+public class BookService {
 
     private BookRepository bookRepository;
 

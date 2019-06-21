@@ -12,7 +12,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Singleton
-public class BookRepositoryImpl implements  BookRepository {
+public class BookRepository  {
 
     @PersistenceContext
     private EntityManager entityManager;
