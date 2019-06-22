@@ -11,16 +11,14 @@ public class BookService {
 
     private BookRepository bookRepository;
 
-    public BookServiceImpl(BookRepository bookRepository) {
+    public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
-    @Override
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
 
-    @Override
     public Book addBook(String title) {
         return bookRepository.save(title);
     }

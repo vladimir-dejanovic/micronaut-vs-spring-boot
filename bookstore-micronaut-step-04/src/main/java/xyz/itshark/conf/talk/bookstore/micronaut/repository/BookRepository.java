@@ -18,13 +18,12 @@ public class BookRepository  {
     private EntityManager entityManager;
     private final ApplicationConfiguration applicationConfiguration;
 
-    public BookRepositoryImpl(@CurrentSession EntityManager entityManager,
+    public BookRepository(@CurrentSession EntityManager entityManager,
                               ApplicationConfiguration applicationConfiguration) {
         this.entityManager = entityManager;
         this.applicationConfiguration = applicationConfiguration;
     }
 
-    @Override
     @Transactional(readOnly = true)
     public List<Book> findAll() {
         String sqlString = "Select o from Book as o";
@@ -32,7 +31,6 @@ public class BookRepository  {
         return query.getResultList();
     }
 
-    @Override
     @Transactional
     public Book save(String title) {
         Book book = new Book();
